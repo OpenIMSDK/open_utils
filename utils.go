@@ -7,9 +7,11 @@ import (
 	"github.com/golang/protobuf/proto"
 	"github.com/jinzhu/copier"
 	"github.com/pkg/errors"
+	"math/rand"
 	"runtime"
 	"strconv"
 	"strings"
+	"time"
 )
 
 // copy a by b  b->a
@@ -116,6 +118,10 @@ func DifferenceString(slice1, slice2 []string) []string {
 		}
 	}
 	return n
+}
+
+func OperationIDGenerator() string {
+	return strconv.FormatInt(time.Now().UnixNano()+int64(rand.Uint32()), 10)
 }
 
 func RemoveRepeatedStringInList(slc []string) []string {
