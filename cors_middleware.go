@@ -1,4 +1,4 @@
-package utils
+package open_utils
 
 import (
 	"net/http"
