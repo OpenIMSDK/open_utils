@@ -1,9 +1,7 @@
 package open_utils
 
 import (
-	"fmt"
 	"math/rand"
-	"testing"
 	"time"
 )
 
@@ -34,14 +32,4 @@ func randStr(n int) string {
 		remain--
 	}
 	return string(b)
-}
-
-func TestApproach6(t *testing.T) {
-	fmt.Println(randStr(10))
-}
-
-func BenchmarkApproach6(b *testing.B) {
-	for i := 0; i < b.N; i++ {
-		_ = randStr(10)
-	}
 }
