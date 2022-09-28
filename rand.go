@@ -17,7 +17,7 @@ const (
 	letterIdMax  = 63 / letterIdBits
 )
 
-func randStr(n int) string {
+func RandStr(n int) string {
 	b := make([]byte, n)
 	// A rand.Int63() generates 63 random bits, enough for letterIdMax letters!
 	for i, cache, remain := n-1, src.Int63(), letterIdMax; i >= 0; {
