@@ -57,7 +57,7 @@ func pkcs7Padding(data []byte, blockSize int) []byte {
 func pkcs7UnPadding(data []byte) ([]byte, error) {
 	length := len(data)
 	if length == 0 {
-		return nil, errors.New("encrypt error")
+		return nil, errors.New("encrypt constant")
 	}
 	unPadding := int(data[length-1])
 	return data[:(length - unPadding)], nil
